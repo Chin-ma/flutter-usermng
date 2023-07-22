@@ -4,7 +4,7 @@ import 'package:user_manage/main.dart';
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
 
-  @override 
+  @override
   _SplashPageState createState() => _SplashPageState();
 }
 

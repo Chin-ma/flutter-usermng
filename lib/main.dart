@@ -14,9 +14,14 @@ Future<void> main() async {
       url: url, 
       anonKey: anon,
       authFlowType: AuthFlowType.pkce,
+      debug: true,
     );
   } 
-  
+  // await Supabase.initialize(
+  //   url: "https://mmqdkmmmznmdodmlgemc.supabase.co",
+  //   anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1tcWRrbW1tem5tZG9kbWxnZW1jIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODk5MjExNTksImV4cCI6MjAwNTQ5NzE1OX0.f04BHTvkaE2Fs1DxEeJ8SPr26wtmA2Gzoc6zJMMmbLY",
+  //   authFlowType: AuthFlowType.pkce,
+  // );
   runApp(MyApp());
 }
 

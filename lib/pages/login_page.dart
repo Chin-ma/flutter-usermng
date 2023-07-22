@@ -25,11 +25,12 @@ class _LoginPageState extends State<LoginPage> {
       });
       await supabase.auth.signInWithOtp(
         email: _emailController.text.trim(),
-        emailRedirectTo: kIsWeb ? null : 'io.supabase.usrmng://login-callback/',
+        emailRedirectTo:
+            kIsWeb ? null : 'io.supabase.usrmng://login-callback/',
       );
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Check your email for login link')),
+          const SnackBar(content: Text('Check your email for a login link!')),
         );
         _emailController.clear();
       }
@@ -40,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
       );
     } catch (error) {
       SnackBar(
-        content: const Text('Unexpected error occured'),
+        content: const Text('Unexpected error occurred'),
         backgroundColor: Theme.of(context).colorScheme.error,
       );
     } finally {
@@ -67,8 +68,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void dispose() {
-    _emailController.dispose();
     _authStateSubscription.cancel();
+    _emailController.dispose();
     super.dispose();
   }
 
@@ -87,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           const SizedBox(height: 18),
           ElevatedButton(
-            onPressed: _isLoading ? null : _signIn, 
+            onPressed: _isLoading ? null : _signIn,
             child: Text(_isLoading ? 'Loading' : 'Send Magic Link'),
           ),
         ],
