@@ -9,6 +9,12 @@
 .buildlog/
 .history
 .svn/
+ios/
+linux/
+macos/
+test/
+web/
+windows/
 migrate_working_dir/
 
 # IntelliJ related
